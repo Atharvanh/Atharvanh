@@ -29,7 +29,7 @@ Reads public code to build AI-assisted engineering reports and career insights.<
 Barcode-based food facts, portion logging, nutrition charts, and exportable reports.<br>
 `React Native` `Expo` `TypeScript` `Open Food Facts`
 
-**[03 → CETPredict](https://cetpredict.me)** · MHT-CET college predictor<br>
+**[03 → CETPredict](https://cetpredict.in)** · MHT-CET college predictor<br>
 Explore personalized college predictions, historical CAP cutoffs, NIRF rankings, and detailed college profiles.<br>
 `Python` `JavaScript` `HTML / CSS` `JSON / Data Parsing`
 
