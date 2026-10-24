@@ -29,11 +29,11 @@ Reads public code to build AI-assisted engineering reports and career insights.<
 Barcode-based food facts, portion logging, nutrition charts, and exportable reports.<br>
 `React Native` `Expo` `TypeScript` `Open Food Facts`
 
-**[03 → AgriEdge](https://github.com/Atharvanh/SIH-26)** · Agriculture project<br>
-A React frontend and Python backend with historical agricultural commodity data.<br>
-`React` `Python` `Vite`
+**[03 → CETPredict](https://cetpredict.me)** · MHT-CET college predictor<br>
+Explore personalized college predictions, historical CAP cutoffs, NIRF rankings, and detailed college profiles.<br>
+`Python` `JavaScript` `HTML / CSS` `JSON / Data Parsing`
 
-<sub>Selected from my public, non-fork repositories. Project names link directly to the source.</sub>
+<sub>Selected projects from my public work. ZeroLabs and WelNest link to source; CETPredict opens the live site.</sub>
 
 ### `03 / git log --every-day`
 

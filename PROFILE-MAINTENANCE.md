@@ -26,7 +26,7 @@ Validation and pull requests use read-only repository permissions. Only the upda
 
 - [ZeroLabs](https://github.com/Atharvanh/new-zerolabs): public, non-fork; README documents JavaScript, Express, Gemini, Tailwind CSS and Three.js.
 - [WelNest](https://github.com/Atharvanh/cep_project): public, non-fork; README and package describe React Native, Expo, TypeScript, barcode lookup, nutrition logging and reporting.
-- [AgriEdge](https://github.com/Atharvanh/SIH-26): public, non-fork; README documents Python backend, agricultural commodity data, and a frontend package with React/Vite.
+- [CETPredict](https://cetpredict.me): featured at the owner’s request, replacing AgriEdge. Description and Python, JavaScript, HTML/CSS, and JSON/data-parsing tags follow the portfolio screenshot supplied by the owner. The live URL is explicitly supplied by the owner.
 - Python is also used by this profile's generators. No Next.js or GSAP claim is made without project evidence.
 - [Canonical LinkedIn profile](https://in.linkedin.com/in/atharvaharale) is publicly indexed as Atharva Harale. The supplied path without `/in/` returns 404; LinkedIn may return anti-bot status 999 for automated direct requests.
 - Portfolio and email were explicitly supplied by the owner. Portfolio HTTP response was 200 during validation; email is a mailto link, not a delivery claim.
