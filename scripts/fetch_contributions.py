@@ -17,7 +17,7 @@ import sys
 import requests
 from bs4 import BeautifulSoup
 
-USERNAME = os.environ.get("GH_PROFILE_USER", "AVIVASHISHTA29")
+USERNAME = os.environ.get("GH_PROFILE_USER", "Atharvanh")
 URL = f"https://github.com/users/{USERNAME}/contributions"
 OUT_PATH = os.path.join(os.path.dirname(__file__), "..", "data", "contributions.json")
 
@@ -43,11 +43,18 @@ def fetch_days():
         if re.search(r"no contributions", text, re.I):
             count = 0
         else:
-            m = re.match(r"(\d+)", text)
-            count = int(m.group(1)) if m else 0
+            m = re.match(r"([\d,]+)\s+contributions?\b", text)
+            if not m:
+                raise ValueError(f"Missing tooltip for {date}; refusing to publish zero counts")
+            count = int(m.group(1).replace(',', ''))
         days.append({"date": date, "count": count, "level": int(td.get("data-level") or 0)})
 
     days.sort(key=lambda d: d["date"])
+    if len(days) < 350 or len({d['date'] for d in days}) != len(days):
+        raise ValueError('Incomplete or duplicate calendar; keeping last known good assets')
+    for previous, current in zip(days, days[1:]):
+        if datetime.date.fromisoformat(current['date']) - datetime.date.fromisoformat(previous['date']) != datetime.timedelta(days=1):
+            raise ValueError('Calendar has missing dates')
     return days
 
 
@@ -99,7 +106,7 @@ def build_data(days):
 
     return {
         "username": USERNAME,
-        "generated_at": datetime.datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%SZ"),
+        "generated_at": datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
         "range": {"start": days[0]["date"], "end": days[-1]["date"]},
         "total_contributions": total,
         "active_days": active_days,
